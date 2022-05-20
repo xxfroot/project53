@@ -1,0 +1,29 @@
+server:
+  port: 8090
+spring:
+  #nacos注册中心配置
+  application:
+    name: "gateway-service"
+  cloud:
+    nacos:
+      discovery:
+        server-addr: "192.168.10.13:8848"
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/account/**
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+
+

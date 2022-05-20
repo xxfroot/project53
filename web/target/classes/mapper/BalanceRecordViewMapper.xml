@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sherfin.mapper.BalanceRecordViewMapper">
+  <resultMap id="BaseResultMap" type="com.sherfin.mapperBean.BalanceRecordView">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="CONSUMER_ID" jdbcType="BIGINT" property="consumerId" />
+    <result column="USER_NO" jdbcType="VARCHAR" property="userNo" />
+    <result column="AMOUNT" jdbcType="DECIMAL" property="amount" />
+    <result column="CREATE_DATE" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="CALLBACK_STATUS" jdbcType="BIT" property="callbackStatus" />
+  </resultMap>
+</mapper>

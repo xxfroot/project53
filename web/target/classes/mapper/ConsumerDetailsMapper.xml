@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sherfin.mapper.ConsumerDetailsMapper">
+  <resultMap id="BaseResultMap" type="com.sherfin.mapperBean.ConsumerDetails">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="CONSUMER_ID" jdbcType="BIGINT" property="consumerId" />
+    <result column="ID_CARD_PHOTO" jdbcType="VARCHAR" property="idCardPhoto" />
+    <result column="ID_CARD_EMBLEM" jdbcType="VARCHAR" property="idCardEmblem" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="ENTERPRISE_MAIL" jdbcType="VARCHAR" property="enterpriseMail" />
+    <result column="CONTACT_RELATION" jdbcType="VARCHAR" property="contactRelation" />
+    <result column="CONTACT_NAME" jdbcType="VARCHAR" property="contactName" />
+    <result column="CONTACT_MOBILE" jdbcType="VARCHAR" property="contactMobile" />
+    <result column="CREATE_DATE" jdbcType="TIMESTAMP" property="createDate" />
+  </resultMap>
+</mapper>

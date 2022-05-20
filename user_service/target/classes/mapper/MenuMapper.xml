@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sherfin.mapper.MenuMapper">
+  <resultMap id="BaseResultMap" type="com.sherfin.mapperBean.Menu">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="PARENT_ID" jdbcType="BIGINT" property="parentId" />
+    <result column="TITLE" jdbcType="VARCHAR" property="title" />
+    <result column="URL" jdbcType="VARCHAR" property="url" />
+    <result column="ICON" jdbcType="VARCHAR" property="icon" />
+    <result column="SORT" jdbcType="INTEGER" property="sort" />
+    <result column="COMMENT" jdbcType="VARCHAR" property="comment" />
+    <result column="STATUS" jdbcType="INTEGER" property="status" />
+    <result column="PRIVILEGE_CODE" jdbcType="VARCHAR" property="privilegeCode" />
+  </resultMap>
+</mapper>

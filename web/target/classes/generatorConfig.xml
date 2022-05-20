@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.sherfin.utils.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/p2p_consumer?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"
+                        userId="root"
+                        password="xxf123456">
+        </jdbcConnection>
+
+
+        <!-- 对于生成的pojo所在包 -->
+        <javaModelGenerator targetPackage="com.sherfin.mapperBean" targetProject="D:\javaproject\project53\web\src\main\java">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <!-- 对于生成的mapper所在目录 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="D:\javaproject\project53\web\src\main\resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+
+        <!-- 配置mapper对应的java映射 -->
+        <javaClientGenerator targetPackage="com.sherfin.mapper" targetProject="D:\javaproject\project53\web\src\main\java"
+                             type="XMLMAPPER">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        <table tableName="balance_record_view" domainObjectName="BalanceRecordView"></table>
+        <table tableName="bank_card" domainObjectName="BankCard"></table>
+        <table tableName="consumer" domainObjectName="Consumer"></table>
+        <table tableName="consumer_details" domainObjectName="ConsumerDetails"></table>
+        <table tableName="recharge_record" domainObjectName="RechargeRecord"></table>
+        <table tableName="withdraw_record" domainObjectName="WithdrawRecord"></table>
+    </context>
+</generatorConfiguration>
